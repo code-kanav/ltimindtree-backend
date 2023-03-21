@@ -91,7 +91,7 @@ app.post("/deleteevent", (req, res) => {
         console.log('Data written to file');
     });
      res.json(events);
-    res.send('Data retrieved and written to file');
+    res.send('Data retrieved and written too file');
 });
 
 
