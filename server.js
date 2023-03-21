@@ -17,6 +17,11 @@ app.get("/users", (req, res) => {
 });
 app.post("/createusers", (req, res) => {
     console.log("req", req.body)
+    res.setHeader("Access-Control-Allow-Origin", "*");
+      res.setHeader(
+        "Access-Control-Allow-Methods",
+        "OPTIONS, GET, POST, PUT, PATCH, DELETE"
+      );
     fs.writeFile('users.json', JSON.stringify(req.body), (err) => {
         // if (err) throw err;
         console.log('Data written to file');
