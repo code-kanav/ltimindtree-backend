@@ -10,28 +10,13 @@ app.use(bodyParser.json())
 app.use(cors());
 app.use((req, res, next) => {
     res.setHeader('Content-Type', 'application/json')
-    res.setHeader("Access-Control-Allow-Origin", "*");
-      res.setHeader(
-        "Access-Control-Allow-Methods",
-        "OPTIONS, GET, POST, PUT, PATCH, DELETE"
-      );
     next()
   })
 app.get("/users", (req, res) => {
-    res.setHeader("Access-Control-Allow-Origin", "*");
-      res.setHeader(
-        "Access-Control-Allow-Methods",
-        "OPTIONS, GET, POST, PUT, PATCH, DELETE"
-      );
     res.json(users);
 });
 app.post("/createusers", (req, res) => {
     console.log("req", req.body)
-    res.setHeader("Access-Control-Allow-Origin", "*");
-      res.setHeader(
-        "Access-Control-Allow-Methods",
-        "OPTIONS, GET, POST, PUT, PATCH, DELETE"
-      );
     fs.writeFile('users.json', JSON.stringify(req.body), (err) => {
         // if (err) throw err;
         console.log('Data written to file');
@@ -41,20 +26,10 @@ app.post("/createusers", (req, res) => {
 });
 
 app.get("/events", (req, res) => {
-    res.setHeader("Access-Control-Allow-Origin", "*");
-      res.setHeader(
-        "Access-Control-Allow-Methods",
-        "OPTIONS, GET, POST, PUT, PATCH, DELETE"
-      );
     res.json(events);
 });
 app.post("/createevents", (req, res) => {
     console.log("req", req.body)
-    res.setHeader("Access-Control-Allow-Origin", "*");
-      res.setHeader(
-        "Access-Control-Allow-Methods",
-        "OPTIONS, GET, POST, PUT, PATCH, DELETE"
-      );
     fs.writeFile('events.json', JSON.stringify(req.body), (err) => {
         if (err) throw err;
         console.log('Data written to file');
@@ -66,11 +41,6 @@ app.post("/createevents", (req, res) => {
 
 app.post("/updateevent", (req, res) => {
     console.log("req", req.body)
-    res.setHeader("Access-Control-Allow-Origin", "*");
-      res.setHeader(
-        "Access-Control-Allow-Methods",
-        "OPTIONS, GET, POST, PUT, PATCH, DELETE"
-      );
     fs.writeFile('events.json', JSON.stringify(req.body), (err) => {
         if (err) throw err;
         console.log('Data written to file');
@@ -81,17 +51,12 @@ app.post("/updateevent", (req, res) => {
 
 app.post("/deleteevent", (req, res) => {
     console.log("req", req.body)
-    res.setHeader("Access-Control-Allow-Origin", "*");
-      res.setHeader(
-        "Access-Control-Allow-Methods",
-        "OPTIONS, GET, POST, PUT, PATCH, DELETE"
-      );
     fs.writeFile('events.json', JSON.stringify(req.body), (err) => {
         if (err) throw err;
         console.log('Data written to file');
     });
      res.json(events);
-    res.send('Data retrieved and written too file');
+    res.send('Data retrieved and written to file');
 });
 
 
