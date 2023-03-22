@@ -7,8 +7,25 @@ const fs = require('fs');
 
 const app = express();
 app.use(bodyParser.json())
-app.use(cors());
+var corsOptions = [
+    {
+      origin: /ltimindtree-backend.vercel.app$/,
+      methods: "GET,HEAD,PUT,PATCH,POST,DELETE",
+    },
+    {
+      origin: /performance.khojdeal.com$/,
+      methods: "GET,HEAD,PUT,PATCH,POST,DELETE",
+    },
+    // {
+    //   origin: /localhost:3000$/,
+    //   methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
+    // },
+  ];
+  app.use(cors());
+  app.options("*", cors());
+
 app.use((req, res, next) => {
+    res.setHeader()
     res.setHeader('Content-Type', 'application/json')
     next()
   })
