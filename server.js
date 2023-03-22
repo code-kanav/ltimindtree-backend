@@ -22,7 +22,7 @@ var corsOptions = [
     // },
   ];
   app.use(cors());
-  app.options("*", cors());
+  app.options("*", cors(corsOptions));
 
 app.use((req, res, next) => {
     res.setHeader()
