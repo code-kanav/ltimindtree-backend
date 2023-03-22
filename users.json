@@ -1,1 +1,9 @@
-{"users":[{"email":"kanavchopra911@gmail.com","password":"Asdfghjkl@1","confirmPassword":"Asdfghjkl@1"}]}
+{
+  "users": [
+    {
+      "email": "kanavchopra911@gmail.com",
+      "password": "Asdfghjkl@1",
+      "confirmPassword": "Asdfghjkl@1"
+    }
+  ]
+}
