@@ -10,7 +10,7 @@ app.use(bodyParser.json())
 
   const corsOptions = {
     AccessControlAllowOrigin: '*',
-    origin: 'https://ltimindtree-frontend.vercel.app/',
+    origin: 'https://ltimindtree-frontend.vercel.app',
     methods: 'GET,HEAD,PUT,PATCH,POST,DELETE'
   }
   app.use(cors(corsOptions))
