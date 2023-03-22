@@ -7,7 +7,6 @@ const fs = require('fs');
 
 const app = express();
 app.use(bodyParser.json())
-const cors = require('cors')
 
   const corsOptions = {
     AccessControlAllowOrigin: '*',
@@ -17,7 +16,7 @@ const cors = require('cors')
   app.use(cors(corsOptions))
 
 app.use((req, res, next) => {
-    res.setHeader()
+    // res.setHeader()
     res.setHeader('Content-Type', 'application/json')
     next()
   })
