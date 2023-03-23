@@ -1,1 +1,9 @@
-{"users":[{"email":"kanavchopra911@gmail.com","password":"Asdfghjkl@1","confirmPassword":"Asdfghjkl@1"},{"email":"aa@gmail.com","password":"Qwertyuiop@1","confirmPassword":"Qwertyuiop@1"},{"email":"aqa@gmail.com","password":"Qwertyuiop@1","confirmPassword":"Qwertyuiop@1"}]}
+{
+  "users": [
+    {
+      "email": "qkanavchopra8@gmail.com",
+      "password": "Qwertyuiop@1",
+      "confirmPassword": "Qwertyuiop@1"
+    }
+  ]
+}

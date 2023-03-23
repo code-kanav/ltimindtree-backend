@@ -10,7 +10,8 @@ app.use(bodyParser.json())
 
   const corsOptions = {
     AccessControlAllowOrigin: '*',
-    origin: 'http://localhost:3001',
+    AccessControlAllowCredentials : true,
+    origin: '*',
     methods: 'GET,HEAD,PUT,PATCH,POST,DELETE'
   }
   app.use(cors(corsOptions))
